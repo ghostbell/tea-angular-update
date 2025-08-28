@@ -1,0 +1,57 @@
+<main>
+  <div class="container">
+    <section class="main wow animate__zoomIn">
+      <ngx-slick-carousel
+        class="single-item"
+        [config]="slideConfig">
+
+        <div ngxSlickItem class="slide first-slide">
+          <div class="main-slide-info d-flex flex-column align-items-start">
+            <span class="main-slide-title fw-bold">Скидки на травянные чаи</span>
+            <span class="main-slide-text fs-5 lh-1">Узнай все подробности, заполнив заявку</span>
+            <button type="button" class="btn btn-primary hvr-bob">Заполнить</button>
+          </div>
+        </div>
+
+        <div ngxSlickItem class="slide second-slide">
+          <div class="main-slide-info d-flex flex-column align-items-start">
+            <span class="main-slide-title fw-bold">Закажи три пачки чая и&nbsp;получи подарок</span>
+            <button type="button" class="btn btn-primary hvr-bob">Заказать</button>
+          </div>
+        </div>
+
+        <div ngxSlickItem class="slide third-slide">
+          <div class="main-slide-info d-flex flex-column align-items-start">
+            <span class="main-slide-title fw-bold">Попробуй нашу новинку — ягодный чай</span>
+            <button type="button" class="btn btn-primary hvr-bob">Заказать</button>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+    </section>
+
+    <section class="faq">
+      <div class="row justify-content-center">
+        <div class="col col-lg-8 col-md-12">
+          <p class="faq-title fw-bold fs-2 text-center">Ответы на часто задаваемые вопросы</p>
+
+          <div *ngFor="let item of accordionItems; let i = index">
+            <button (click)="toggle(i)"
+                    class="d-flex mb-3 w-100 border-0 justify-content-between align-items-center fw-bold bg-primary bg-gradient text-white p-4 rounded-3">
+              <span>{{ item.title }}</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down" [ngClass]="{'rotated': item.open}"></i>
+              </div>
+            </button>
+            <div [hidden]="!item.open" class="ps-4 pb-1">
+              <p>{{ item.content }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div *ngIf="showPopup" class="popup d-flex align-items-center justify-content-between border-secondary p-3 w-50 border border-secondary rounded">
+      <p class="mb-0">Посмотрите наши чайные коллекции</p>
+      <a routerLink="/catalog" class="btn btn-primary">Смотреть</a>
+    </div>
+  </div>
+</main>

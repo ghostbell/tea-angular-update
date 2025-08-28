@@ -1,0 +1,14 @@
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card p {
+  margin-bottom: 24px;
+}
+
+.card .btn {
+  --bs-btn-padding-x: 41px;
+}
