@@ -1,0 +1,15 @@
+<div class="col">
+  <div class="card w-100">
+    <a class="test-popup-link" href="{{ product.image }}">
+      <img src="{{ product.image }}" class="card-img-top" alt="Tea">
+    </a>
+    <div class="card-body d-md-block d-sm-flex flex-column align-items-center">
+      <h5 class="card-title fw-bold">{{ product.title }}</h5>
+      <p class="card-text truncate-multiline">{{ product.description }}</p>
+      <div class="card-actions d-flex flex-column">
+        <a routerLink="/order" class="btn btn-primary hvr-bob mb-3" [queryParams]="{product: product.title}">Купить</a>
+        <a [routerLink]="['/catalog', product.id]" class="btn btn-outline-primary hvr-bob">Подробнее</a>
+      </div>
+    </div>
+  </div>
+</div>

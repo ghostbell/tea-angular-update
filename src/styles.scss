@@ -1,0 +1,281 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  margin: 72px 0;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 19px;
+  color: #595555;
+
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #076BFF;
+  padding: 9px 13px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev:before {
+  content: '\f104';
+}
+
+.slick-next:before {
+  content: '\f105';
+}
+
+.slide {
+  padding: 208px 0 208px 121px;
+}
+
+.first-slide {
+  background: url("assets/images/slide_1.png");
+  padding-top: 192px;
+  padding-bottom: 192px;
+}
+
+.second-slide {
+  background: url("assets/images/slide_2.png");
+}
+
+.third-slide {
+  background: url("assets/images/slide_3.png");
+}
+
+.main-slide-text {
+  margin-bottom: 70px;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+  background-image: url('assets/images/default-icon.png') !important;
+}
+
+.ui-state-active .ui-icon, .ui-button:active .ui-icon {
+  transform: rotate(180deg);
+}
+
+.main .btn {
+  --bs-btn-padding-x: 46px;
+}
+
+.slick-prev {
+  left: 13px;
+}
+
+.slick-next {
+  right: 33px;
+}
+
+.ui-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.ui-icon-triangle-1-s,
+.ui-icon-triangle-1-e {
+  background-position: unset;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active,
+.ui-widget-content {
+  border: 0;
+}
+
+
+
+
+.products-title {
+  margin-bottom: 50px;
+}
+
+.card-body {
+  padding: 20px 24px;
+}
+
+.card-title {
+  margin-bottom: 12px;
+}
+
+.card p {
+  margin-bottom: 24px;
+}
+
+.card .btn {
+  --bs-btn-padding-x: 41px;
+}
+
+
+
+
+
+.faq {
+  margin-top: 72px;
+}
+
+.faq-title {
+  margin-bottom: 50px;
+}
+
+.ui-accordion .ui-accordion-header {
+  margin-bottom: 16px;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0 0 24px 23px;
+}
+
+.ui-accordion .ui-accordion-content p {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+.order {
+  margin-top: 72px;
+  margin-bottom: 48px;
+}
+
+.order-title {
+  margin-bottom: 60px;
+}
+
+.form-label {
+  margin-bottom: 18px;
+}
+
+.order .btn {
+  padding: 7px 37px;
+}
+
+.success-form-info {
+  margin-bottom: 96px;
+}
+
+.main-slide-title {
+  font-size: 48px;
+  margin-bottom: 70px;
+  line-height: 58px;
+}
+
+.slide:not(:nth-child(2)) .main-slide-info {
+  max-width: 594px;
+}
+
+
+
+
+@media screen and (max-width: 1399px){
+  .main-slide-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1199px){
+  .products-items .row div:last-child .card p {
+    margin-bottom: 47px;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .main-slide-title {
+    font-size: 32px;
+  }
+
+  .products-items .row div:nth-child(4) .card p {
+    margin-bottom: 47px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .main-slide-info {
+    width: 70%;
+    text-align: center;
+    align-items: center !important;
+  }
+
+  .main-slide-title {
+    line-height: 32px;
+    font-size: 30px;
+    margin-bottom: 48px;
+  }
+
+  .main-slide-text {
+    margin-bottom: 48px;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  .slide:not(.first-slide) {
+    padding-top: 220px;
+    padding-bottom: 220px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .first-slide {
+    padding-top: 196px;
+    padding-bottom: 196px;
+  }
+}
+
+@media screen and (max-width: 487px) {
+  .main-slide-title {
+    font-size: 28px;
+  }
+
+  .main-slide-text {
+    font-size: 16px !important;
+  }
+
+  .slide {
+    padding-left: 94px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .slide {
+    padding-left: 80px;
+  }
+
+  .ui-icon {
+    width: 28px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .main-slide-title {
+    font-size: 26px;
+  }
+
+  .slide.second-slide {
+    padding-top: 228px;
+    padding-bottom: 228px;
+  }
+
+  .slide.third-slide {
+    padding-top: 212px;
+    padding-bottom: 212px;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

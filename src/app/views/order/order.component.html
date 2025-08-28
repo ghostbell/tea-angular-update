@@ -1,0 +1,123 @@
+<section class="order wow animate__backInUp">
+  <div class="container">
+    <p class="order-title fw-bold fs-2 text-center lh-1">Сделать заказ</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-12">
+        <form *ngIf="showOrderForm" class="row" [formGroup]="orderForm">
+          <div class="col-md-4 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Имя
+              <input type="text" class="form-control"
+                     formControlName="name">
+            </label>
+            <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+              <div class="text-danger" *ngIf="name?.errors?.['required']">
+                Обязательно к заполнению
+              </div>
+              <div class="text-danger" *ngIf="name?.errors?.['pattern']">
+                Имя может содержать только буквы
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Фамилия
+              <input type="text" class="form-control"
+                     formControlName="lastName">
+            </label>
+            <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">
+              <div class="text-danger" *ngIf="lastName?.errors?.['required']">
+                Обязательно к заполнению
+              </div>
+              <div class="text-danger" *ngIf="lastName?.errors?.['pattern']">
+                Фамилия может содержать только буквы
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Телефон
+              <input type="tel" class="form-control"
+                     formControlName="phone">
+            </label>
+            <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+              <div class="text-danger" *ngIf="phone?.errors?.['required']">
+                Обязательно к заполнению
+              </div>
+              <div class="text-danger" *ngIf="phone?.errors?.['pattern']">
+                Введите корректный номер телефона
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Страна
+              <input type="text" class="form-control"
+                     formControlName="country">
+            </label>
+            <div class="text-danger"
+                 *ngIf="country?.invalid && (country?.dirty || country?.touched) && country?.errors?.['required']">
+              Обязательно к заполнению
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Индекс
+              <input type="text" class="form-control"
+                     formControlName="index">
+            </label>
+            <div *ngIf="index?.invalid && (index?.dirty || index?.touched)">
+              <div class="text-danger" *ngIf="index?.errors?.['required']">
+                Обязательно к заполнению
+              </div>
+              <div class="text-danger" *ngIf="index?.errors?.['pattern']">
+                Индекс может содержать только цифры и иметь длину в 6 символов
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Адрес
+              <input type="text" class="form-control"
+                     formControlName="address">
+            </label>
+            <div *ngIf="address?.invalid && (address?.dirty || address?.touched)">
+              <div class="text-danger" *ngIf="address?.errors?.['required']">
+                Обязательно к заполнению
+              </div>
+              <div class="text-danger" *ngIf="address?.errors?.['pattern']">
+                Введите корректный адрес
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Товар
+              <input type="text" class="form-control" readonly
+                     formControlName="product">
+            </label>
+          </div>
+          <div class="col-md-12 col-sm-6 col-12">
+            <label class="form-label w-100">
+              Комментарий к заказу
+              <input type="text" class="form-control"
+                     formControlName="comment">
+            </label>
+          </div>
+
+
+
+          <div class="col-md-5 col-sm-12">
+            <button class="btn btn-primary hvr-bob w-100" (click)="createOrder()">Отправить</button>
+            <p *ngIf="showErrorMessage">Произошла ошибка. Попробуйте еще раз</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div *ngIf="showSuccessInfo" class="success-form-info d-flex flex-column text-center">
+      <span class="fw-bold fs-3 mb-2">Спасибо за заказ</span>
+      <span>Мы свяжемся с вами в ближайшее время!</span>
+    </div>
+  </div>
+</section>

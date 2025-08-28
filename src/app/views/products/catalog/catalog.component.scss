@@ -1,0 +1,15 @@
+.products-title {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1199px) {
+  .products-items .row div:last-child .card p {
+    margin-bottom: 47px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .products-items .row div:nth-child(4) .card p {
+    margin-bottom: 47px;
+  }
+}
