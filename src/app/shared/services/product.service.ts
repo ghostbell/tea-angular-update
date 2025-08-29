@@ -12,11 +12,11 @@ export class ProductService {
   }
 
   getProducts(): Observable<ProductType[]> {
-    return this.http.get<ProductType[]>('http://testologia.ru/tea');
+    return this.http.get<ProductType[]>('https://testologia.ru/tea');
   }
 
   getProduct(id: number): Observable<ProductType> {
-    return this.http.get<ProductType>(`http://testologia.ru/tea?id=${id}`);
+    return this.http.get<ProductType>(`https://testologia.ru/tea?id=${id}`);
   }
 
   createOrder(data: {
