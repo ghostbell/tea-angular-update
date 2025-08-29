@@ -10,7 +10,7 @@
         <h2 class="card-title fw-bold mb-4">{{ product.title }}</h2>
         <p class="card-text">{{ product.description }}</p>
         <p class="card-price fs-5 fw-medium mt-4">Цена: {{ product.price }} руб.</p>
-        <a routerLink="/order" class="btn btn-primary hvr-bob w-25">Купить</a>
+        <a routerLink="/order" [queryParams]="{product: product.title}" class="btn btn-primary hvr-bob w-25">Купить</a>
       </div>
     </div>
   </div>
