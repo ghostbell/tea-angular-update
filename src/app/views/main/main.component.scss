@@ -42,17 +42,17 @@
 }
 
 .first-slide {
-  background: url("/assets/images/slide_1.png");
+  background: url("~src/assets/images/slide_1.png");
   padding-top: 192px;
   padding-bottom: 192px;
 }
 
 .second-slide {
-  background: url("/assets/images/slide_2.png");
+  background: url("~src/assets/images/slide_2.png");
 }
 
 .third-slide {
-  background: url("/assets/images/slide_3.png");
+  background: url("~src/assets/images/slide_3.png");
 }
 
 .main-slide-text {
@@ -60,7 +60,7 @@
 }
 
 .ui-icon, .ui-widget-content .ui-icon {
-  background-image: url('/src/assets/images/default-icon.png') !important;
+  background-image: url('~src/assets/images/default-icon.png') !important;
 }
 
 .ui-state-active .ui-icon, .ui-button:active .ui-icon {
